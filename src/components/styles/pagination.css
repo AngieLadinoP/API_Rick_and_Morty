@@ -1,0 +1,21 @@
+.pagination__nav{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+.pagination__button{
+    width:100px;
+    background-color:black;
+    color:white;
+    font-size:large;
+    margin:2px;
+    padding:5px;
+    border-radius:10px;
+    border:solid 1px black;
+    cursor:pointer;
+}
+
+.pagination__button:hover{
+    background-color:red;
+    border:solid 1px red;
+}
+

@@ -1,0 +1,50 @@
+ .home{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    margin:auto;
+    width:90%;
+    padding:10px;
+}
+.home__title{
+    font-family:"Playfair Display Sc", serif;
+    grid-column: 1/span 2;
+    text-align:center;
+}
+.home__img{
+   width:90%;
+   margin:auto;
+   border-radius:10px;
+}
+.home__text{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:justify;
+    margin:auto;
+}
+
+@media (max-width:768px){
+    .home{
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 5fr 5fr;
+        margin:auto;
+        font-family: "Poppins",sans-serif;
+    }
+    .home__img{
+        grid-column:1;
+        grid-row:2;
+        margin:auto;
+    }
+    .home__text{
+        grid-column:1;
+        grid-row:3;
+    } 
+}
+@media (max-width:600px){
+    .home{
+        
+        grid-template-rows:1fr 3fr 8fr;
+        margin:auto;
+        font-family: "Poppins",sans-serif;
+    }
+} 

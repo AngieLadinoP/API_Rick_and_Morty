@@ -1,0 +1,31 @@
+.header{
+    background-color:black;
+    color:white;
+}
+.header__title{
+    text-align:center;
+    font-family:"Playfair display SC",serif;
+    letter-spacing:2px;
+    margin:5px;
+}
+
+.nav{
+    display:flex;
+    justify-content:right;
+    margin-right:5%;
+}
+.nav__link{
+    text-decoration:none;
+    list-style:none;
+    color:white;
+    padding:10px;
+    cursor:pointer;
+    font-size:larger;
+}
+.nav__link:hover{
+    background-color:red;
+}
+.section-shown{
+    background-color:white;
+    color:black
+}

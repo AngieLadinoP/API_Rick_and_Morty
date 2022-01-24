@@ -1,0 +1,14 @@
+
+.characters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:black;
+}
+
+.characters__title{
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing:2px;
+}
+
