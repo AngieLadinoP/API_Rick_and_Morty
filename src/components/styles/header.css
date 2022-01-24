@@ -1,31 +1,35 @@
-.header{
-    background-color:black;
-    color:white;
-}
-.header__title{
-    text-align:center;
-    font-family:"Playfair display SC",serif;
-    letter-spacing:2px;
-    margin:5px;
+.header {
+    background-color: black;
+    color: white;
 }
 
-.nav{
-    display:flex;
-    justify-content:right;
-    margin-right:5%;
+.header__title {
+    text-align: center;
+    font-family: "Playfair display SC", serif;
+    letter-spacing: 2px;
+    margin: 5px;
 }
-.nav__link{
-    text-decoration:none;
-    list-style:none;
-    color:white;
-    padding:10px;
-    cursor:pointer;
-    font-size:larger;
+
+.header__nav {
+    display: flex;
+    justify-content: right;
+    margin-right: 5%;
 }
-.nav__link:hover{
-    background-color:red;
+
+.header__nav--link {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: larger;
 }
-.section-shown{
-    background-color:white;
-    color:black
+
+.hader__nav--link:hover {
+    background-color: red;
+}
+
+.section-shown {
+    background-color: white;
+    color: black
 }
