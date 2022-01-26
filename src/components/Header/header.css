@@ -1,0 +1,11 @@
+.header {
+    background-color: black;
+    color: white;
+}
+
+.header__title {
+    text-align: center;
+    font-family: "Playfair display SC", serif;
+    letter-spacing: 2px;
+    margin: 5px;
+}

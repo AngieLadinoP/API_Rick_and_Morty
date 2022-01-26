@@ -1,20 +1,26 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import Layout from './components/Layout.jsx'
-import Home from './components/Home.jsx'
-import Characters from './components/Characters.jsx'
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./components/Layout/Layout.jsx";
+import Home from "./components/Home/Home.jsx";
+import Characters from "./components/Characters/Characters.jsx";
+import Episodes from "./components/Episodes/Episodes.jsx";
+
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home/>} />
-          <Route path="/Characters" element={<Characters />} />
+          {/* This element will always be displayed  */}
+          <Route index element={<Home />} />
+          {/* Index replaces "/" since it is in the Layout */}
+          <Route path="/episodes" element={<Episodes />} />
+          <Route path="/characters" element={<Characters />} />
+
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route>
       </Routes>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

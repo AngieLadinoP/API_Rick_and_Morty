@@ -1,0 +1,19 @@
+
+.navigation {
+    display: flex;
+    justify-content: right;
+    margin-right: 5%;
+}
+
+.navigation__link{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.navigation__link:hover {
+    background-color: red;
+}
