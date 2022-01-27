@@ -1,12 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Character from "./Character/Character.jsx";
-import Button from "./Button/Button.jsx";
-import Searchbar from "./Searchbar/Searchbar.jsx";
+import Button from "../Common/Button/Button.jsx";
+import Searchbar from "../Common/Searchbar/Searchbar.jsx";
 import "./characters.css";
 
 function Characters() {
-  //* FETCH API
   const urlCharacters = "https://rickandmortyapi.com/api/character";
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState([]);
@@ -19,11 +18,13 @@ function Characters() {
     setEpisodes(results);
   }; */
 
+  //* FETCH API
   const fetchCharacters = (url) => {
-    fetch(url)
-      .then((response) => response.json())
+    fetch(url) // Get HTTP response
+      .then((response) => response.json()) // Turn the response into JSON
       .then((data) => {
-        if (data.results !== undefined) {
+        // Specify what to do with the JSON file, in thos case, save data into state
+        if (data.results) {
           setCharacters(data.results);
           setInfo(data.info);
         } else {

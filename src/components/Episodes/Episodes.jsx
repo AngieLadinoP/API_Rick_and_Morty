@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Episode from "./Episode/Episode";
-import Button from "../Characters/Button/Button.jsx";
+import Button from "../Common/Button/Button.jsx";
 import "./episodes.css";
 
 const Episodes = () => {
@@ -17,15 +17,26 @@ const Episodes = () => {
     setEpisodes(results);
   }; */
 
+  //* FETCH API
   const fetchEpisodes = (url) => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((newEpisode) => {
-        setEpisodes(newEpisode.results);
-        setInfo(newEpisode.info);
-      }); // Guardar la información en el estado
+    fetch(url) // Get HTTP response
+      .then((response) => response.json()) // Turn the response into JSON
+      .then((data) => {
+        if (data.results) {
+          // Specify what to do with the JSON file, in thos case, save data into state
+          setEpisodes(data.results);
+          setInfo(data.info);
+        } else {
+          alert("Episode not found");
+        }
+      });
   };
 
+  useEffect(() => {
+    fetchEpisodes(urlEpisodes);
+  }, []);
+
+  //* PAGINATION
   const onPrevious = () => {
     fetchEpisodes(info.prev);
   };
@@ -33,9 +44,6 @@ const Episodes = () => {
   const onNext = () => {
     fetchEpisodes(info.next);
   };
-  useEffect(() => {
-    fetchEpisodes(urlEpisodes);
-  }, []);
 
   return (
     <>

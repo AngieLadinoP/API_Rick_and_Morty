@@ -16,12 +16,12 @@ const Episode = (props) => {
   useEffect(() => {
     // eslint-disable-next-line
     charactersUrls.map((characterUrl) => {
+      // Get data from each url of the characters
       fetch(characterUrl)
         .then((response) => response.json())
         .then((newCharacter) => {
           setCharacters((prevCharacter) => [...prevCharacter, newCharacter]);
         });
-      // eslint-disable-next-line
     });
   }, [charactersUrls]);
 
@@ -34,8 +34,8 @@ const Episode = (props) => {
       </div>
       <div className="episode__characters">
         <ul className="epoisode__characters--list columns">
-          {characters.map((character, index) => (
-            <li key={index}> {character.name}</li>
+          {characters.map((character) => (
+            <li key={character.id}> {character.name}</li>
           ))}
         </ul>
       </div>

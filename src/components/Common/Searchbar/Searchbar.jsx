@@ -26,7 +26,7 @@ const Searchbar = (props) => {
           className="searchbar__submit"
           type="submit"
           value="Search"
-          disabled={name ? "" : "disabled"} //if there isn't anything written, the button won't work
+          disabled={name ? "" : "disabled"} //if there isn't anything written, the button won't be available
         />
       </form>
     </>
