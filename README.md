@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App]
 
 ## Demo
 
-Click here to see the [Demo ](https://rick-and-morty-al.netlify.app/)
+Click to see the [Demo](https://rick-and-morty-al.netlify.app/)
 
 ---
 

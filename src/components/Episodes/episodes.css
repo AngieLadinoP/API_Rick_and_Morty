@@ -6,10 +6,9 @@
   color: black;
   width:100%;
   margin:auto;
-  border-radius: 100px;
   }
 
-  .episodes__title {
+.episodes__title {
     font-family: 'Playfair Display SC', serif;
     letter-spacing: 2px;
 }
