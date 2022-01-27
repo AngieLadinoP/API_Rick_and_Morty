@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Character from "../../Characters/Character/Character.jsx";
 import "./episode.css";
 
 const Episode = (props) => {
@@ -29,21 +28,16 @@ const Episode = (props) => {
   return (
     <div className="episode">
       <div className="episode__information">
-        <h2 className="episode__info episode__info--title">{name}</h2>
+        <h4 className="episode__info episode__info--title">{name}</h4>
         <p className="episode__info episode__info--season">{episode}</p>
         <p className="episode__info episode__info--date">{airDate}</p>
       </div>
       <div className="episode__characters">
-        {characters.map((character) => (
-          <Character
-            key={character.id}
-            name={character.name}
-            img={character.image}
-            status={character.status}
-            species={character.species}
-            gender={character.gender}
-          />
-        ))}
+        <ul className="epoisode__characters--list columns">
+          {characters.map((character, index) => (
+            <li key={index}> {character.name}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
