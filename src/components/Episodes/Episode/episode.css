@@ -59,13 +59,17 @@
         grid-template-rows: auto;
         height:auto;
         width:90%;
+
     }
     
     .episode__information{
         writing-mode: horizontal-tb;
         transform: rotate(360deg);
         padding:0;
-      
+        border-top-right-radius: 25px;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 0px;
     }
     
     
