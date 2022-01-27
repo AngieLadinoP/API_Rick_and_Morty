@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {
+  BrowserRouter,
+  HashRouter as Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Layout from "./components/Layout/Layout.jsx";
 import Home from "./components/Home/Home.jsx";
 import Characters from "./components/Characters/Characters.jsx";
