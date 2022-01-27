@@ -6,23 +6,25 @@ const Episode = (props) => {
   const { name, airDate, episode, charactersUrls } = props;
   const [characters, setCharacters] = useState([]);
 
-  /* useEffect(() => {
+  /*   useEffect(() => {
     charactersUrls.map(async (characterUrl) => {
       const response = await fetch(characterUrl);
       const newCharacter = await response.json();
-      setCharacter((prevCharacter) => [...prevCharacter, newCharacter]);
+      setCharacters((prevCharacter) => [...prevCharacter, newCharacter]);
     });
   }, []); */
 
   useEffect(() => {
+    // eslint-disable-next-line
     charactersUrls.map((characterUrl) => {
       fetch(characterUrl)
         .then((response) => response.json())
         .then((newCharacter) => {
           setCharacters((prevCharacter) => [...prevCharacter, newCharacter]);
         });
+      // eslint-disable-next-line
     });
-  }, []);
+  }, [charactersUrls]);
 
   return (
     <div className="episode">
