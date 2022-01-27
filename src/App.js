@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout/Layout.jsx";
 import Home from "./components/Home/Home.jsx";
 import Characters from "./components/Characters/Characters.jsx";
 import Episodes from "./components/Episodes/Episodes.jsx";
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           {/* This element will always be displayed  */}
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="*" element={<Navigate replace to="/" />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
