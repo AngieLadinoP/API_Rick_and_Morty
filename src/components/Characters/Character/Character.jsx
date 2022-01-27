@@ -2,7 +2,7 @@ import React from "react";
 import "./character.css";
 
 const Character = (props) => {
-  const { name, img, status, species, gender, origin } = props;
+  const { name, img, status, species, gender } = props;
   return (
     <div className="character">
       <h3 className="character__title"> {name} </h3>
@@ -17,10 +17,7 @@ const Character = (props) => {
           {`Species: ${species}`}
         </p>
         <p className="character__info characer__info--gender">
-          {`ender: ${gender}`}
-        </p>
-        <p className="character__info characer__info--origin">
-          {`Origin: ${origin}`}
+          {`Gender: ${gender}`}
         </p>
       </div>
     </div>

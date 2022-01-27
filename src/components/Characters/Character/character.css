@@ -1,19 +1,18 @@
  .character {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows:1fr 4fr;
+    display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #e712243a;
+    background-color: #e712244f;
     border-radius: 20px;
-    margin: 5px;
+    margin:2px;
     overflow: hidden;
-    width:400px;
-
+    width:200px;
+    height: 300px;
 }
  
  .character__title {
-     grid-column:1/span 2;
+     grid-column:1;
      font-family: 'Playfair Display SC', serif;
      padding: 5px;
      text-align: center;
@@ -24,11 +23,13 @@
      display:flex;
      justify-content: center;
      align-items: center;
+     margin:auto;
+     padding:0;
  }
 
  .character__img {
      border-radius: 100px;
-    width:150px;
+     width:100px;
  }
  
  .character__information {
@@ -37,12 +38,12 @@
      justify-content:center;
      align-items:flex-start;
      margin:auto;
-     margin:0;
-     padding:0;
  }
 
  .character__info{
-     margin:0;
-     padding:0;
+    display:flex;
+    justify-content: center;
 
+    margin:auto;
+    padding:0;
  }

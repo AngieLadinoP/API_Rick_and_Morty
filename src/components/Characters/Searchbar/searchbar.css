@@ -1,12 +1,15 @@
 .searchbar__input{
     border-radius: 5px;
     border:solid 1px black;
+    padding:5px;
 }
 .searchbar__submit{ 
-    width: 100px;
+    width: auto;
+    padding:5px;
     margin: 2px;
     border-radius: 10px;
     cursor: pointer;
+
 }
 
 

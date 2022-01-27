@@ -7,9 +7,17 @@ import "./characters.css";
 
 function Characters() {
   //* FETCH API
-  const url = "https://rickandmortyapi.com/api/character";
+  const urlCharacters = "https://rickandmortyapi.com/api/character";
   const [characters, setCharacters] = useState([]);
   const [info, setInfo] = useState([]);
+
+  /* const fetchCharacters = async (url) => {
+    const res = await fetch(url);
+    const episodesJSON = await res.json();
+    const { results, info } = await episodesJSON;
+    setInfo(info);
+    setEpisodes(results);
+  }; */
 
   const fetchCharacters = (url) => {
     fetch(url)
@@ -23,9 +31,10 @@ function Characters() {
         }
       }); // Guardar la información en el estado
   };
+
   //useEffect is used with APIs and takes a function as argument
   useEffect(() => {
-    fetchCharacters(url);
+    fetchCharacters(urlCharacters);
   }, []); // As it is only one time that we render info from the API, [] is empty. If components were updated a parameter would be needed
 
   //* PAGINATION
@@ -39,13 +48,19 @@ function Characters() {
 
   //* FILTER
   const firstPage = () => {
-    const firstPageUrl = `${url}?page=1`;
+    const firstPageUrl = `${urlCharacters}?page=1`;
     fetchCharacters(firstPageUrl);
   };
-
   const filterName = (name) => {
-    // query is the parameter used to filter by (name, status, species, type, gender)
-    const urlFilter = `${url}/?name=${name}`;
+    const urlFilter = `${urlCharacters}/?name=${name}`;
+    fetchCharacters(urlFilter);
+  };
+  const filterMale = () => {
+    const urlFilter = `${urlCharacters}/?gender=male`;
+    fetchCharacters(urlFilter);
+  };
+  const filterFemale = () => {
+    const urlFilter = `${urlCharacters}/?gender=female`;
     fetchCharacters(urlFilter);
   };
 
@@ -53,8 +68,12 @@ function Characters() {
     <>
       <div className="characters">
         <h1 className="characters__title title"> CHARACTERS </h1>
-        <Searchbar onChange={filterName} />
-        <Button name="See all" onChange={firstPage} pageInfo={true} />
+        <div className="characters__filter">
+          <Searchbar onChange={filterName} />
+          <Button name="See all" onChange={firstPage} pageInfo={true} />
+          <Button name="Male" onChange={filterMale} pageInfo={true} />
+          <Button name="Female" onChange={filterFemale} pageInfo={true} />
+        </div>
         <div className="characters__cards">
           {characters.map((character) => {
             return (
@@ -65,7 +84,6 @@ function Characters() {
                 status={character.status}
                 species={character.species}
                 gender={character.gender}
-                origin={character.origin.name}
               />
             );
           })}

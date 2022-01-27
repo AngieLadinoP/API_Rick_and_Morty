@@ -1,0 +1,29 @@
+.episodes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width:100%;
+  margin:auto;
+  }
+
+  .episodes__title {
+    font-family: 'Playfair Display SC', serif;
+    letter-spacing: 2px;
+}
+
+.episodes__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin:5px;
+}
+
+.episodes__buttons{
+  display:flex;
+  justify-content: center;
+    align-items: center;
+    margin:auto;
+}

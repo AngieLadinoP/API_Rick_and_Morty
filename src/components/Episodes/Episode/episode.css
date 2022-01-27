@@ -1,0 +1,30 @@
+.episode{
+    display: flex;
+    flex-direction: column;
+    background-color: #e712243b;
+    margin:5px 0;
+    justify-content:center;
+    align-content: center;
+    border-radius:100px;
+
+}
+
+.episode__information{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items: center;
+    background-color:#e71224 ;
+    color:white;
+    font-size:large;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+
+.episode__characters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
