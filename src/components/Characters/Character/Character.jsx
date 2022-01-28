@@ -10,15 +10,21 @@ const Character = (props) => {
         <img className="character__img" src={img} alt={name} />
       </figure>
       <div className="character__information">
-        <p className="character__info character__info--status">
-          {`Status: ${status}`}
-        </p>
-        <p className="character__info characer__info--species">
-          {`Species: ${species}`}
-        </p>
-        <p className="character__info characer__info--gender">
-          {`Gender: ${gender}`}
-        </p>
+        {status ? (
+          <p className="character__info character__info--status">
+            {`Status: ${status}`}
+          </p>
+        ) : null}
+        {species ? (
+          <p className="character__info character__info--species">
+            {`Species: ${species}`}
+          </p>
+        ) : null}
+        {gender ? (
+          <p className="character__info characer__info--gender">
+            {`Gender: ${gender}`}
+          </p>
+        ) : null}
       </div>
     </div>
   );

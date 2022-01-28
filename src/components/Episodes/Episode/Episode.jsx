@@ -33,11 +33,16 @@ const Episode = (props) => {
         <p className="episode__info episode__info--date">{airDate}</p>
       </div>
       <div className="episode__characters">
-        <ul className="epoisode__characters--list columns">
-          {characters.map((character) => (
-            <li key={character.id}> {character.name}</li>
-          ))}
-        </ul>
+        {characters.map((character) => (
+          <div className="episode__character" key={character.id}>
+            <li className="episode__character--name">{character.name} </li>
+            <img
+              className="episode__character--image"
+              src={character.image}
+              alt={character.name}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

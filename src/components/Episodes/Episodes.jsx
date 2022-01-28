@@ -44,11 +44,14 @@ const Episodes = () => {
   const onNext = () => {
     fetchEpisodes(info.next);
   };
-
   return (
     <>
       <div className="episodes">
         <h2 className="episodes__title">Episodes</h2>
+        <div className="episodes__buttons">
+          <Button name="Previous" onChange={onPrevious} pageInfo={info.prev} />
+          <Button name="Next" onChange={onNext} pageInfo={info.next} />
+        </div>
         <div className="episodes__cards">
           {episodes.map((episode) => (
             <Episode

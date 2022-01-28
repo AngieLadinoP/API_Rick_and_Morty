@@ -18,7 +18,7 @@ const Searchbar = (props) => {
         <input
           className="searchbar__input"
           type="text"
-          placeholder="Characters name..."
+          placeholder="Name..."
           value={name}
           onChange={(event) => setName(event.target.value)}
         />

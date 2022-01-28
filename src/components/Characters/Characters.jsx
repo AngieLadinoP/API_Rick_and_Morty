@@ -69,11 +69,16 @@ function Characters() {
     <>
       <div className="characters">
         <h1 className="characters__title title"> CHARACTERS </h1>
+        <p>Filter your search</p>
         <div className="characters__filter">
           <Searchbar onChange={filterName} />
-          <Button name="See all" onChange={firstPage} pageInfo={true} />
           <Button name="Male" onChange={filterMale} pageInfo={true} />
           <Button name="Female" onChange={filterFemale} pageInfo={true} />
+          <Button name="Clear" onChange={firstPage} pageInfo={true} />
+        </div>
+        <div className="characters__buttons">
+          <Button name="Previous" onChange={onPrevious} pageInfo={info.prev} />
+          <Button name="Next" onChange={onNext} pageInfo={info.next} />
         </div>
         <div className="characters__cards">
           {characters.map((character) => {
