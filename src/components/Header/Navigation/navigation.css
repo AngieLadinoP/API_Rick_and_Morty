@@ -1,11 +1,10 @@
-
 .navigation {
     display: flex;
     justify-content: right;
     margin-right: 5%;
 }
 
-.navigation__link{
+.navigation__link {
     text-decoration: none;
     list-style: none;
     color: white;
@@ -14,6 +13,11 @@
     font-size: larger;
 }
 
-.navigation__link:hover {
+.navigation__link:hover, .active {
     background-color: red;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
