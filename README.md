@@ -1,12 +1,16 @@
-# Rick and Morty
+<h1 align="center"> Rick and Morty </h1>
 
-Rick and Morty information about characters and episodes throguh Fetch API
+Data fetching of the official Rick and Morty API to display information about characters and episodes of the series.
+Interactive interface developed with <b> REACT </b>
 
-This project was bootstrapped with [Create React App]
+<h3 align="center">
 
-## Demo
+See live demo here [rick-and-morty-al.netlify.app](https://rick-and-morty-al.netlify.app/)
 
-Click to see the [Demo](https://rick-and-morty-al.netlify.app/)
+</h3>
+
+![image](https://user-images.githubusercontent.com/95056296/157867686-bd8cec52-8686-43ff-b2b7-f9df780fd0b5.png)
+
 
 ---
 
